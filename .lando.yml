@@ -1,0 +1,28 @@
+name: laravel-vue
+recipe: laravel
+config:
+  webroot: public
+  php: "8.1"
+  composer_version: "2.2.7"
+  database: mysql:8.0
+  cache: none
+services:
+  appserver:
+    build:
+      - composer install
+  node:
+    type: node:16
+    ssl: true
+    overrides:
+      ports:
+        - 3000:3000
+    build:
+      - npm install
+tooling:
+  node:
+    service: node
+  npm:
+    service: node
+proxy:
+  node:
+    - bs.laravel-vue.lndo.site:3000

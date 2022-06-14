@@ -1,0 +1,23 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "resources/js/**/*",
+    "resources/js/**/*.vue",
+    ".eslintrc.js",
+    ".stylelintrc.js",
+    "webpack.mix.js"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "isolatedModules": false,
+    // https://github.com/vuejs/vue-loader/issues/1915
+    "noImplicitAny": false,
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "types": ["@types/lodash", "@types/webpack-env", "@types/node"],
+    "paths": {
+      "@/*": ["./resources/js/*"],
+      "@images/*": ["./resources/images/*"]
+    },
+    "resolveJsonModule": true
+  }
+}

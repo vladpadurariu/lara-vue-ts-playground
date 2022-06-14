@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class GreetingResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+     */
+    public function toArray($request)
+    {
+        return [
+            '__typename' => self::class,
+            'uuid' => $this->uuid,
+            'greeting' => $this->greeting,
+            'language' => LanguageResource::collection($this->whenLoaded('language'))
+        ];
+    }
+}

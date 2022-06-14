@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "code": "bs",
+    "language": "Bosanski"
+  },
+  {
+    "id": 2,
+    "code": "bg",
+    "language": "Български език"
+  },
+  {
+    "id": 3,
+    "code": "hr",
+    "language": "Hrvatski"
+  },
+  {
+    "id": 4,
+    "code": "cz",
+    "language": "Čeština"
+  },
+  {
+    "id": 5,
+    "code": "dk",
+    "language": "Dansk"
+  },
+  {
+    "id": 6,
+    "code": "de",
+    "language": "Deutsch"
+  },
+  {
+    "id": 7,
+    "code": "en",
+    "language": "English"
+  },
+  {
+    "id": 8,
+    "code": "ee",
+    "language": "Eesti"
+  },
+  {
+    "id": 9,
+    "code": "fi",
+    "language": "Suomi"
+  },
+  {
+    "id": 10,
+    "code": "fr",
+    "language": "Français"
+  },
+  {
+    "id": 11,
+    "code": "gr",
+    "language": "Eλληνικά"
+  },
+  {
+    "id": 12,
+    "code": "hu",
+    "language": "Magyar"
+  },
+  {
+    "id": 13,
+    "code": "it",
+    "language": "Italiano"
+  },
+  {
+    "id": 14,
+    "code": "jp",
+    "language": "日本語"
+  },
+  {
+    "id": 15,
+    "code": "lv",
+    "language": "Latviešu"
+  },
+  {
+    "id": 16,
+    "code": "lt",
+    "language": "Lietuvių"
+  },
+  {
+    "id": 17,
+    "code": "nl",
+    "language": "Nederlands"
+  },
+  {
+    "id": 18,
+    "code": "no",
+    "language": "Norsk"
+  },
+  {
+    "id": 19,
+    "code": "pl",
+    "language": "Polski"
+  },
+  {
+    "id": 20,
+    "code": "pt",
+    "language": "Português"
+  },
+  {
+    "id": 21,
+    "code": "ro",
+    "language": "Română"
+  },
+  {
+    "id": 22,
+    "code": "sr",
+    "language": "Српски"
+  },
+  {
+    "id": 23,
+    "code": "sk",
+    "language": "Slovenský Jazyk"
+  },
+  {
+    "id": 24,
+    "code": "si",
+    "language": "Slovenščina"
+  },
+  {
+    "id": 25,
+    "code": "es",
+    "language": "Español"
+  },
+  {
+    "id": 26,
+    "code": "se",
+    "language": "Svenska"
+  },
+  {
+    "id": 27,
+    "code": "ru",
+    "language": "Pусский"
+  }
+]
