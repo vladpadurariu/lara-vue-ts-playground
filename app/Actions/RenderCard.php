@@ -7,13 +7,12 @@ use App\Models\Greeting;
 use App\Models\Theme;
 use Inertia\Inertia;
 use Inertia\Response;
-use Lorisleiva\Actions\ActionRequest;
 
 class RenderCard
 {
     use AsAction;
 
-    public function asController(Greeting $greeting, Theme $theme, ActionRequest $request): Response
+    public function asController(Greeting $greeting, Theme $theme): Response
     {
         $this
             ->set('greeting', $greeting)

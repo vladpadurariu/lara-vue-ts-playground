@@ -4,10 +4,8 @@ import { useLanguage } from '@/composables/useLanguage';
 // import type { LanguageResource } from '@/types/resources';
 import type { Language } from './LanguageCard';
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = defineProps({
+defineProps({
   languages: {
-    // type: Array as PropType<Language[]>,
     type: Array as PropType<Array<Language>>,
     required: true,
   },
@@ -19,7 +17,7 @@ let activeIndex = ref<string>();
 
 function pickLang(language: Language): void {
   activeIndex.value = language.uuid;
-  cardFooter.value?.classList.add('isVisible');
+  cardFooter.value?.classList.add('is-visible');
 }
 </script>
 
@@ -40,12 +38,11 @@ function pickLang(language: Language): void {
       ref="cardFooter"
       class="card__footer"
     >
-      <router-link
-        to="create"
+      <button
         @click="useLanguage().setLanguage()"
       >
         Create card
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -56,6 +53,7 @@ function pickLang(language: Language): void {
   --red: rgb(229, 0, 0);
 
   background-color: #faebd7;
+  font-size: 1.75rem;
   width: 40rem;
 
   ul {
@@ -63,8 +61,9 @@ function pickLang(language: Language): void {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 450px;
+    height: auto;
     list-style: none;
+    max-height: 350px;
     padding: 1rem 0;
 
     li {
@@ -79,13 +78,8 @@ function pickLang(language: Language): void {
   li {
     &:hover {
       background: var(--red);
-      color: var(--red);
-      cursor: pointer;
-    }
-
-    &selected {
-      background: var(--red);
       color: var(--white);
+      cursor: pointer;
     }
   }
 
@@ -96,7 +90,7 @@ function pickLang(language: Language): void {
     transition: opacity 1s ease-in;
     width: 100%;
 
-    a {
+    button {
       background: var(--red);
       border: 0;
       border-radius: 0.2rem;
@@ -110,6 +104,11 @@ function pickLang(language: Language): void {
         color: var(--red);
       }
     }
+  }
+
+  .selected {
+    background: var(--red);
+    color: var(--white);
   }
 
   .is-visible {

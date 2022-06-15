@@ -16,8 +16,8 @@ export interface SharedFlash<SharedFlashData = unknown> {
 
 export interface SharedProps {
   errors: Errors & ErrorBag;
-  localization: SharedLocalization;
-  flash: SharedFlash;
+  // localization: SharedLocalization;
+  // flash: SharedFlash;
 }
 
 export interface ErrorPage extends SharedProps {

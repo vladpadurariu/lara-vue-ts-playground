@@ -24,4 +24,9 @@ import AppCreateCard from '@/pages/CreateCard.vue';
   </div>
 </template>
 
-<!-- <style lang="scss" scoped></style> -->
+<style lang="scss" scoped>
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 10px;
+}
+</style>
