@@ -4,12 +4,6 @@ import { useLanguage } from '@/composables/useLanguage';
 // import type { LanguageResource } from '@/types/resources';
 import type { Language } from './LanguageCard';
 
-// interface Language {
-//   id: number;
-//   code: string;
-//   language: string;
-// }
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
   languages: {
@@ -58,57 +52,70 @@ function pickLang(language: Language): void {
 
 <style lang="scss" scoped>
 .card {
+  --white: rgb(255, 255, 255);
+  --red: rgb(229, 0, 0);
+
+  background-color: #faebd7;
   width: 40rem;
-  background-color: antiquewhite;
+
   ul {
+    align-content: space-around;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     height: 450px;
     list-style: none;
     padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    flex-wrap: wrap;
+
     li {
-      padding: 0.5rem 1rem;
+      color: rgb(72, 61, 139);
       font-size: 1.1rem;
       font-weight: bold;
+      padding: 0.5rem 1rem;
       text-align: center;
-      color: darkslateblue;
-      &:hover {
-        cursor: pointer;
-        background: #e50000;
-        color: white;
-      }
-      &.selected {
-        color: white;
-        background: #e50000;
-      }
     }
   }
+
+  li {
+    &:hover {
+      background: var(--red);
+      color: var(--red);
+      cursor: pointer;
+    }
+
+    &selected {
+      background: var(--red);
+      color: var(--white);
+    }
+  }
+
   &__footer {
-    width: 100%;
-    padding: 1rem 0;
     display: none;
     opacity: 0;
+    padding: 1rem 0;
     transition: opacity 1s ease-in;
+    width: 100%;
+
     a {
-      text-decoration: none;
-      border: none;
+      background: var(--red);
+      border: 0;
       border-radius: 0.2rem;
-      background: #e50000;
-      padding: 0.5rem 1rem;
-      color: white;
+      color: var(--white);
       cursor: pointer;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+
       &:hover {
-        background: white;
-        color: #e50000;
+        background: var(--white);
+        color: var(--red);
       }
     }
   }
-  .isVisible {
-    opacity: 1;
+
+  .is-visible {
     display: flex;
     justify-content: center;
+    opacity: 1;
   }
 }
 </style>

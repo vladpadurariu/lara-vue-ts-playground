@@ -17,9 +17,10 @@ const languages = computed(() => usePage<ChooseLanguagePage>().props.value.langu
 
 <style lang="scss" scoped>
 .content {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   h1 {
     margin-bottom: 2rem;
   }

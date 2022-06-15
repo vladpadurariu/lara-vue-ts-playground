@@ -19,16 +19,18 @@ const store = useLanguage();
 
 <style lang="scss" scoped>
 nav {
-  width: 100%;
-  height: 2rem;
   display: flex;
+  height: 2rem;
   justify-content: space-between;
+  width: 100%;
+
   a {
+    color: rgb(255, 255, 255);
     padding: 0.2rem 1rem;
     text-decoration: none;
-    color: white;
+
     &:hover {
-      background: red;
+      background: rgb(255, 0, 0);
     }
   }
 }
