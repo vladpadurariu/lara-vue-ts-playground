@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import AppNavbar from '@/components/Nav/Nav-bar.vue';
+import AppNavbar from '@/components/Nav/Navigation.vue';
 import AppChooseLanguage from '@/pages/ChooseLanguage.vue';
 import AppCreateCard from '@/pages/CreateCard.vue';
 
