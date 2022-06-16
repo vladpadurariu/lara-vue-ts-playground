@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-const mix = require("laravel-mix");
-const path = require("path");
-const StylelintPlugin = require("stylelint-webpack-plugin");
-const ESLintPlugin = require("eslint-webpack-plugin");
+const mix = require('laravel-mix');
+const path = require('path');
+const StylelintPlugin = require('stylelint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -18,22 +18,22 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 mix
   .webpackConfig({
     plugins: [
-      new StylelintPlugin({ files: "resources/**/*.{scss,vue}" }),
-      new ESLintPlugin({ files: "resources/js/**/*.{ts,vue}" }),
+      new StylelintPlugin({ files: 'resources/**/*.{scss,vue}' }),
+      new ESLintPlugin({ files: 'resources/js/**/*.{ts,vue}' }),
     ],
   })
   .alias({
-    "@": path.join(__dirname, "resources/js"),
-    "@images": path.join(__dirname, "resources/images"),
+    '@': path.join(__dirname, 'resources/js'),
+    '@images': path.join(__dirname, 'resources/images'),
   })
-  .ts("resources/js/main.ts", "public/js/app.js")
+  .ts('resources/js/main.ts', 'public/js/app.js')
   .vue({
-    //   globalStyles: "resources/scss/config/_all.scss",
+    globalStyles: 'resources/scss/app.scss',
   })
   .extract()
-  .sass("resources/scss/app.scss", "public/css")
-  .sourceMaps(false, "source-map")
-  .copyDirectory("resources/images", "public/images")
+  .sass('resources/scss/app.scss', 'public/css')
+  .sourceMaps(false, 'source-map')
+  .copyDirectory('resources/images', 'public/images')
   .browserSync({
     open: false,
     proxy: process.env.APP_URL,

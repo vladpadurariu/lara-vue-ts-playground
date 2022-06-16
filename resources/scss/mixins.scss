@@ -1,0 +1,42 @@
+@use 'sass:math';
+
+@mixin mq($breakpoint-name) {
+  $breakpoint-name: unquote($breakpoint-name);
+  @if map-has-key($breakpoints, $breakpoint-name) {
+    $query: map-get($breakpoints, $breakpoint-name);
+    @media all and #{$query} {
+      @content;
+    }
+  } @else {
+    @warn '#{$mq-name} is not a value defined in the 'breakpoints' map.';
+  }
+}
+
+// BACKGROUND GRADIENT
+// https://robots.thoughtbot.com/controlling-color-with-sass-color-functions
+// https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/
+@mixin bg-gradient($directionTo: top, $colorStart: black, $colorEnd: white , $upTo: 100%) {
+  background: linear-gradient(to $directionTo, $colorStart 0%, $colorEnd $upTo);
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: true) {
+  $padding: unquote(math.div($y, $x) * 100 + '%');
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      padding-top: $padding;
+      width: 100%;
+    }
+  } @else {
+    > .ratio:first-child {
+      display: block;
+      padding-top: $padding;
+    }
+  }
+}

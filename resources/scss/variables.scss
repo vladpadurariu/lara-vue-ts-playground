@@ -1,0 +1,67 @@
+/* COLORS */
+$black: #1c1c1c;
+$white: #fff;
+$light: #f8f8f8;
+$grey: #acacac;
+$primary: #ed1c24;
+$error: #c8362e;
+$success: #519735;
+
+/* OVERLAY */
+$overlay-black: rgba(0, 0, 0, 0.2);
+
+$text-colors: (
+  'black' : $black,
+  'white': $white,
+  'grey': $grey,
+  'bs-red': $primary,
+  'light': $light
+);
+
+// Font sizes
+$size-1: rem(46);
+$size-2: rem(40);
+$size-3: rem(36);
+$size-4: rem(26);
+$size-5: rem(20);
+$size-6: rem(16);
+$size-7: rem(14);
+
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7;
+
+$spacing-values: (
+  '0': 0,
+  '1': rem(10),
+  '2': rem(20),
+  '3': rem(30),
+  '4': rem(40),
+  '5': rem(50),
+  '6': rem(60),
+);
+
+// Shadow, find more smooth shadow: https://s.muz.li/MWNjYTY2Yjk4
+$shadow: 0 0.9px 2.6px rgba(0, 0, 0, 0.02),
+  0 3.1px 5.1px rgba(0, 0, 0, 0.03),
+  0 14px 14px rgba(0, 0, 0, 0.05)
+;
+
+// Easing
+$easing-smooth: cubic-bezier(0.5, 0, 0, 1);
+
+// Transition
+$transition: 0.2s ease;
+$transition-smooth: 0.5s $easing-smooth;
+
+// MEDIA QUERIES
+$breakpoints: (
+  // FOR IE
+  ie: '(-ms-high-contrast: active), (-ms-high-contrast: none)',
+  max-hugescreen:'(max-width:1599px)', min-hugescreen:'(min-width:1600px)',
+  max-fullhd: '(max-width:1407px)', min-fullhd: '(min-width:1408px)',
+  max-widescreen: '(max-width:1215px)', min-widescreen: '(min-width:1216px)',
+  max-desktop: '(max-width:1023px)', min-desktop: '(min-width:1024px)',
+  max-mobile: '(max-width:768px)', min-mobile: '(min-width:769px)',
+  max-small-mobile: '(max-width:540px)', min-small-mobile: '(max-width:540px)',
+  max-tiny: '(max-width:370px)', min-tiny: '(max-width:370px)',
+) !default;
+

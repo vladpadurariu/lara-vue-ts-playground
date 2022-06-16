@@ -49,9 +49,6 @@ function pickLang(language: Language): void {
 
 <style lang="scss" scoped>
 .card {
-  --white: rgb(255, 255, 255);
-  --red: rgb(229, 0, 0);
-
   background-color: #faebd7;
   font-size: 1.75rem;
   width: 40rem;
@@ -62,7 +59,6 @@ function pickLang(language: Language): void {
     flex-direction: column;
     flex-wrap: wrap;
     height: auto;
-    list-style: none;
     max-height: 350px;
     padding: 1rem 0;
 
@@ -77,8 +73,8 @@ function pickLang(language: Language): void {
 
   li {
     &:hover {
-      background: var(--red);
-      color: var(--white);
+      background: $primary;
+      color: $white;
       cursor: pointer;
     }
   }
@@ -91,24 +87,24 @@ function pickLang(language: Language): void {
     width: 100%;
 
     button {
-      background: var(--red);
+      background: $primary;
       border: 0;
       border-radius: 0.2rem;
-      color: var(--white);
+      color: $white;
       cursor: pointer;
       padding: 0.5rem 1rem;
       text-decoration: none;
 
       &:hover {
-        background: var(--white);
-        color: var(--red);
+        background: $white;
+        color: $primary;
       }
     }
   }
 
   .selected {
-    background: var(--red);
-    color: var(--white);
+    background: $primary;
+    color: $white;
   }
 
   .is-visible {

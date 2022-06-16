@@ -22,7 +22,7 @@ const languages = computed(() => usePage<ChooseLanguagePage>().props.value.langu
   flex-direction: column;
 
   h1 {
-    font-size: xx-large;
+    /* font-size: xx-large; */
     margin-bottom: 2rem;
   }
 }

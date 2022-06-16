@@ -1,0 +1,54 @@
+.text {
+  @each $name, $color in $text-colors {
+    &-#{$name} {
+      color: $color !important;
+    }
+  }
+}
+
+.bg {
+  @each $name, $color in $text-colors {
+    &-#{$name} {
+      background-color: $color !important;
+    }
+  }
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+em {
+  color: $primary;
+  font-style: normal;
+}
+
+strong {
+  color: inherit;
+  font-family: DINPro-Medium;
+}
+
+.text-bold {
+  font-family: DINPro-Bold;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.relative {
+  position: relative;
+}
