@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { useLanguage } from '@/composables/useLanguage';
 
-const store = useLanguage();
+const state = useLanguage();
 </script>
 
 <template>
   <nav>
     <div>Logo</div>
-    <router-link
-      v-if="store.languageIsSet"
-      to="\/"
-      @click="store.setLanguage()"
+    <a
+      v-if="state.languageIsSet"
+      aria-hidden="true"
+      @click="state.setLanguage()"
     >
       Chose language
-    </router-link>
+    </a>
   </nav>
 </template>
 

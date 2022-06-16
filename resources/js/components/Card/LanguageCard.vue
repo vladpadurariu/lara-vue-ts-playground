@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref, type PropType } from 'vue';
 import { useLanguage } from '@/composables/useLanguage';
-// import type { LanguageResource } from '@/types/resources';
 import type { Language } from './LanguageCard';
 
 defineProps({
@@ -11,6 +10,7 @@ defineProps({
   },
 });
 
+const state = useLanguage();
 const cardFooter = ref<HTMLElement | null>();
 // eslint-disable-next-line prefer-const
 let activeIndex = ref<string>();
@@ -39,7 +39,7 @@ function pickLang(language: Language): void {
       class="card__footer"
     >
       <button
-        @click="useLanguage().setLanguage()"
+        @click="state.setLanguage()"
       >
         Create card
       </button>
@@ -83,7 +83,7 @@ function pickLang(language: Language): void {
     display: none;
     opacity: 0;
     padding: 1rem 0;
-    transition: opacity 1s ease-in;
+    transition: opacity $transition-smooth;
     width: 100%;
 
     button {

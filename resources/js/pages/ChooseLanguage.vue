@@ -10,7 +10,7 @@ const languages = computed(() => usePage<ChooseLanguagePage>().props.value.langu
 
 <template>
   <div class="content">
-    <h1>Choose your language</h1>
+    <h2>Choose your language</h2>
     <AppLanguageCard :languages="languages" />
   </div>
 </template>
@@ -21,8 +21,7 @@ const languages = computed(() => usePage<ChooseLanguagePage>().props.value.langu
   display: flex;
   flex-direction: column;
 
-  h1 {
-    /* font-size: xx-large; */
+  h2 {
     margin-bottom: 2rem;
   }
 }
