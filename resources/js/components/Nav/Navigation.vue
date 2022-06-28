@@ -10,6 +10,7 @@ const state = useLanguage();
     <a
       v-if="state.languageIsSet"
       aria-hidden="true"
+      :href="`/`"
       @click="state.setLanguage()"
     >
       Chose language
@@ -25,7 +26,7 @@ nav {
   width: 100%;
 
   a {
-    color: rgb(255, 255, 255);
+    color: rgb(176, 50, 50);
     padding: 0.2rem 1rem;
     text-decoration: none;
 

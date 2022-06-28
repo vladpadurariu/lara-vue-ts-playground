@@ -14,9 +14,12 @@ const state = useLanguage();
 const cardFooter = ref<HTMLElement | null>();
 // eslint-disable-next-line prefer-const
 let activeIndex = ref<string>();
+// eslint-disable-next-line prefer-const
+let lang = ref<string>();
 
 function pickLang(language: Language): void {
   activeIndex.value = language.uuid;
+  lang.value = language.abbreviation;
   cardFooter.value?.classList.add('is-visible');
 }
 </script>
@@ -28,6 +31,7 @@ function pickLang(language: Language): void {
         v-for="language in languages"
         :key="language.uuid"
         :class="{ selected: activeIndex === language.uuid }"
+        class="text-center"
         aria-hidden="true"
         @click="pickLang(language)"
       >
@@ -38,11 +42,13 @@ function pickLang(language: Language): void {
       ref="cardFooter"
       class="card__footer"
     >
-      <button
+      <a
+        aria-hidden="true"
+        :href="`/cards/create/${lang}`"
         @click="state.setLanguage()"
       >
         Create card
-      </button>
+      </a>
     </div>
   </div>
 </template>
@@ -67,7 +73,6 @@ function pickLang(language: Language): void {
       font-size: 1.1rem;
       font-weight: bold;
       padding: 0.5rem 1rem;
-      text-align: center;
     }
   }
 
@@ -86,7 +91,7 @@ function pickLang(language: Language): void {
     transition: opacity $transition-smooth;
     width: 100%;
 
-    button {
+    a {
       background: $primary;
       border: 0;
       border-radius: 0.2rem;

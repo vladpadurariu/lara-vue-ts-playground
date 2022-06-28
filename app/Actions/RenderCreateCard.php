@@ -3,24 +3,30 @@
 namespace App\Actions;
 
 use App\Actions\Traits\AsAction;
+use App\Http\Resources\GreetingResource;
+use App\Http\Resources\ThemeResource;
 use App\Models\Greeting;
+use App\Models\Language;
 use App\Models\Theme;
 use Inertia\Inertia;
 use Inertia\Response;
+use Lorisleiva\Actions\ActionRequest;
 
 class RenderCreateCard
 {
     use AsAction;
 
-    public function asController(Greeting $greeting, Theme $theme): Response
+    public function asController(ActionRequest $request, $language): Response
     {
-        $this
-            ->set('greeting', $greeting)
-            ->set('theme', $theme);
+        $language = Language::where('abbreviation', $language)->first();
+        $greetings = Greeting::where('language_id', $language->id)->get();
+        $themes = Theme::all();
 
-        return Inertia::render('CreateCard', [
-            'greeting' => $greeting->toResource(),
-            'theme' => $theme->toResource()
-        ]);
+        return Inertia::render('CreateCard',
+            [
+                'greetings' => GreetingResource::collection($greetings),
+                'themes' => ThemeResource::collection($themes),
+            ]
+        );
     }
 }

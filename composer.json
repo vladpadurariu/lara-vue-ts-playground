@@ -10,7 +10,7 @@
     "require": {
         "php": "^8.0.2",
         "dyrynda/laravel-model-uuid": "^6.6",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.4",
         "inertiajs/inertia-laravel": "^0.6.2",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",

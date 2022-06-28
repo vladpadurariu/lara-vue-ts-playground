@@ -18,7 +18,6 @@ class GreetingResource extends JsonResource
             '__typename' => self::class,
             'uuid' => $this->uuid,
             'greeting' => $this->greeting,
-            'language' => LanguageResource::collection($this->whenLoaded('language'))
         ];
     }
 }
