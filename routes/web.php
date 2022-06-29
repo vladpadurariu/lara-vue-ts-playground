@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', RenderLanguages::class)->name('languages.list');
-Route::get('/cards/create/{id}', RenderCreateCard::class)->name('cards.create');
+Route::get('/cards/create/{language}', RenderCreateCard::class)->name('cards.create');
 Route::get('/cards/{card}', RenderCard::class)->name('cards.view');
 Route::post('/cards', SaveCard::class)->name('cards.create.post');

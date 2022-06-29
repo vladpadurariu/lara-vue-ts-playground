@@ -1,11 +1,17 @@
+import { ref, watch } from 'vue';
+
 export function useLanguage() {
-  let languageIsSet = false;
+  const languageIsSet = ref(false);
 
-  function setLanguage() {
-    languageIsSet = !languageIsSet;
-
-    return languageIsSet;
+  function setLanguage(newVal: boolean) {
+    console.log(languageIsSet.value);
+    languageIsSet.value = newVal;
+    console.log(languageIsSet.value);
   }
+
+  // watch(languageIsSet, (newVal) => {
+  //   setLanguage(newVal);
+  // });
 
   return {
     languageIsSet,

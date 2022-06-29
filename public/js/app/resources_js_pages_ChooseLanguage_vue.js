@@ -26,8 +26,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
-    expose();
-    var state = (0,_composables_useLanguage__WEBPACK_IMPORTED_MODULE_1__.useLanguage)();
+    expose(); // const { languageIsSet, setLanguage } = useLanguage();
+    // const { setLanguage } = useLanguage();
+
     var cardFooter = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(); // eslint-disable-next-line prefer-const
 
     var activeIndex = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(); // eslint-disable-next-line prefer-const
@@ -43,11 +44,11 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     var __returned__ = {
-      state: state,
       cardFooter: cardFooter,
       activeIndex: activeIndex,
       lang: lang,
-      pickLang: pickLang
+      pickLang: pickLang,
+      useLanguage: _composables_useLanguage__WEBPACK_IMPORTED_MODULE_1__.useLanguage
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -125,7 +126,9 @@ var _hoisted_3 = {
 };
 var _hoisted_4 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.languages, function (language) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.useLanguage().languageIsSet), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.languages, function (language) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", {
       key: language.uuid,
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
@@ -144,7 +147,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "aria-hidden": "true",
     href: "/cards/create/".concat($setup.lang),
     onClick: _cache[0] || (_cache[0] = function ($event) {
-      return $setup.state.setLanguage();
+      return $setup.useLanguage().setLanguage(true);
     })
   }, " Create card ", 8
   /* PROPS */

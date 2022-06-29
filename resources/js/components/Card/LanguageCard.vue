@@ -10,7 +10,9 @@ defineProps({
   },
 });
 
-const state = useLanguage();
+// const { languageIsSet, setLanguage } = useLanguage();
+
+// const { setLanguage } = useLanguage();
 const cardFooter = ref<HTMLElement | null>();
 // eslint-disable-next-line prefer-const
 let activeIndex = ref<string>();
@@ -26,6 +28,7 @@ function pickLang(language: Language): void {
 
 <template>
   <div class="card">
+    <div>{{ useLanguage().languageIsSet }}</div>
     <ul>
       <li
         v-for="language in languages"
@@ -45,7 +48,7 @@ function pickLang(language: Language): void {
       <a
         aria-hidden="true"
         :href="`/cards/create/${lang}`"
-        @click="state.setLanguage()"
+        @click="useLanguage().setLanguage(true)"
       >
         Create card
       </a>
