@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, type PropType } from 'vue';
+import { Link } from '@inertiajs/inertia-vue3';
 import { useLanguage } from '@/composables/useLanguage';
 import type { Language } from './LanguageCard';
 
@@ -10,7 +11,7 @@ defineProps({
   },
 });
 
-// const { languageIsSet, setLanguage } = useLanguage();
+const { languageIsSet, setLanguage } = useLanguage();
 
 // const { setLanguage } = useLanguage();
 const cardFooter = ref<HTMLElement | null>();
@@ -28,7 +29,6 @@ function pickLang(language: Language): void {
 
 <template>
   <div class="card">
-    <div>{{ useLanguage().languageIsSet }}</div>
     <ul>
       <li
         v-for="language in languages"
@@ -45,13 +45,15 @@ function pickLang(language: Language): void {
       ref="cardFooter"
       class="card__footer"
     >
-      <a
-        aria-hidden="true"
+      <Link
+        as="button"
+        type="button"
+        class="button"
         :href="`/cards/create/${lang}`"
-        @click="useLanguage().setLanguage(true)"
+        @click="setLanguage(true)"
       >
         Create card
-      </a>
+      </Link>
     </div>
   </div>
 </template>
@@ -93,21 +95,6 @@ function pickLang(language: Language): void {
     padding: 1rem 0;
     transition: opacity $transition-smooth;
     width: 100%;
-
-    a {
-      background: $primary;
-      border: 0;
-      border-radius: 0.2rem;
-      color: $white;
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-
-      &:hover {
-        background: $white;
-        color: $primary;
-      }
-    }
   }
 
   .selected {

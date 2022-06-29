@@ -20,8 +20,12 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
+
+    var _useLanguage = (0,_composables_useLanguage__WEBPACK_IMPORTED_MODULE_1__.useLanguage)(),
+        languageIsSet = _useLanguage.languageIsSet;
+
     var __returned__ = {
-      useLanguage: _composables_useLanguage__WEBPACK_IMPORTED_MODULE_1__.useLanguage
+      languageIsSet: languageIsSet
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -53,10 +57,9 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
+var _hoisted_3 = [_hoisted_2];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.useLanguage().languageIsSet.value), 1
-  /* TEXT */
-  )]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
 }
 
 /***/ }),

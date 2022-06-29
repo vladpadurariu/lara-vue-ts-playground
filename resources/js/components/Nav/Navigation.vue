@@ -1,22 +1,24 @@
 <script setup lang="ts">
+import { Link } from '@inertiajs/inertia-vue3';
 import { useLanguage } from '@/composables/useLanguage';
 
-// const { setLanguage, languageIsSet } = useLanguage();
+const { setLanguage, languageIsSet } = useLanguage();
 
 </script>
 
 <template>
   <nav>
     <div>Logo</div>
-    <div>{{ useLanguage().languageIsSet }}</div>
-    <a
-      v-if="useLanguage().languageIsSet.value === true"
-      aria-hidden="true"
+    <Link
+      v-if="languageIsSet"
+      as="button"
+      type="button"
+      class="button"
       :href="`/`"
-      @click="useLanguage().setLanguage(false)"
+      @click="setLanguage(false)"
     >
       Chose language
-    </a>
+    </Link>
   </nav>
 </template>
 
@@ -26,16 +28,5 @@ nav {
   height: 2rem;
   justify-content: space-between;
   width: 100%;
-
-  a {
-    color: rgb(176, 50, 50);
-    padding: 0.2rem 1rem;
-    text-decoration: none;
-  }
-
-  a:hover {
-    background: rgb(255, 0, 0);
-    color: rgb(255, 255, 255);
-  }
 }
 </style>
