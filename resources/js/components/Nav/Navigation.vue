@@ -7,7 +7,7 @@ const { setLanguage, languageIsSet } = useLanguage();
 </script>
 
 <template>
-  <nav>
+  <nav class="container-layout">
     <div>Logo</div>
     <Link
       v-if="languageIsSet"
@@ -15,7 +15,7 @@ const { setLanguage, languageIsSet } = useLanguage();
       type="button"
       class="button"
       :href="`/`"
-      @click="setLanguage(false)"
+      @click="setLanguage(false, 'en')"
     >
       Chose language
     </Link>
@@ -24,8 +24,9 @@ const { setLanguage, languageIsSet } = useLanguage();
 
 <style lang="scss" scoped>
 nav {
+  align-items: center;
   display: flex;
-  height: 2rem;
+  height: 3rem;
   justify-content: space-between;
   width: 100%;
 }

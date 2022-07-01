@@ -110,16 +110,38 @@ h6 {
 }
 
 .button {
-  background: $primary;
-  border: 0;
+  background-color: $white;
+  border: 0.1rem solid $primary;
   border-radius: 0.2rem;
-  color: $white;
+  color: $primary;
   cursor: pointer;
   padding: 0.5rem 1rem;
   text-decoration: none;
 
   &:hover {
-    background: $white;
-    color: $primary;
+    background: $primary;
+    color: $white;
+  }
+}
+
+.container-layout {
+  margin: 0 auto;
+  max-width: rem(1160);
+  width: 100%;
+
+  &.is-medium {
+    max-width: rem(960);
+  }
+
+  &.is-small {
+    max-width: rem(760);
+  }
+
+  &.is-smaller {
+    max-width: rem(540);
+  }
+
+  &.is-tiny {
+    max-width: rem(460);
   }
 }

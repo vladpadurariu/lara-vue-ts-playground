@@ -11,7 +11,7 @@ defineProps({
   },
 });
 
-const { languageIsSet, setLanguage } = useLanguage();
+const { setLanguage } = useLanguage();
 
 // const { setLanguage } = useLanguage();
 const cardFooter = ref<HTMLElement | null>();
@@ -50,7 +50,7 @@ function pickLang(language: Language): void {
         type="button"
         class="button"
         :href="`/cards/create/${lang}`"
-        @click="setLanguage(true)"
+        @click="setLanguage(true, lang!)"
       >
         Create card
       </Link>

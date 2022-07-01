@@ -1,6 +1,6 @@
 import type { Errors, ErrorBag } from "@inertiajs/inertia";
 import type { Locale, Translation } from "@/types/localization";
-import type { LanguageResource } from "@/types/resources";
+import type { GreetingResource, LanguageResource, ThemeResource } from "@/types/resources";
 
 export interface SharedLocalization {
   defaultLocale: string;
@@ -16,8 +16,8 @@ export interface SharedFlash<SharedFlashData = unknown> {
 
 export interface SharedProps {
   errors: Errors & ErrorBag;
-  // localization: SharedLocalization;
-  // flash: SharedFlash;
+  localization: SharedLocalization;
+  flash: SharedFlash;
 }
 
 export interface ErrorPage extends SharedProps {
@@ -26,4 +26,9 @@ export interface ErrorPage extends SharedProps {
 
 export interface ChooseLanguagePage extends SharedProps {
   languages: Array<LanguageResource>;
+}
+
+export interface CreateCardPage extends SharedProps {
+  greetings: Array<GreetingResource>;
+  themes: Array<ThemeResource>;
 }

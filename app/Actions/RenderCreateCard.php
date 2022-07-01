@@ -18,9 +18,10 @@ class RenderCreateCard
 
     public function asController(ActionRequest $request, $language): Response
     {
-        $language = Language::where('abbreviation', $language)->first();
-        $greetings = Greeting::where('language_id', $language->id)->get();
+        $lang = Language::where('abbreviation', $language)->first();
+        $greetings = Greeting::where('language_id', $lang->id)->get();
         $themes = Theme::all();
+        session()->put('locale', $language);
 
         return Inertia::render('CreateCard',
             [
