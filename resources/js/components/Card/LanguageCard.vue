@@ -60,7 +60,8 @@ function pickLang(language: Language): void {
 
 <style lang="scss" scoped>
 .card {
-  background-color: #faebd7;
+  background-color: $light;
+  border-radius: 0.5rem;
   font-size: 1.75rem;
   width: 40rem;
 

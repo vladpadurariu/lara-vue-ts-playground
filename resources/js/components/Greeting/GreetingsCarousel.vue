@@ -1,13 +1,20 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-unresolved */
 <script setup lang="ts">
 import type { PropType } from 'vue';
 import { EffectFade, Navigation, Pagination } from 'swiper';
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import type { Greeting } from './GreetingCarousel';
 
 // Import Swiper styles
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import 'swiper/scss';
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import 'swiper/scss/navigation';
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import 'swiper/scss/pagination';
+// eslint-disable-next-line import/extensions, import/no-unresolved
 import 'swiper/css/effect-fade';
 
 defineProps({

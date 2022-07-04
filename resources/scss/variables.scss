@@ -7,6 +7,7 @@ $primary: #ed1c24;
 $error: #c8362e;
 $success: #519735;
 $washed-red: #d59c9e;
+$night-blue: #323975;
 
 /* OVERLAY */
 $overlay-black: rgba(0, 0, 0, 0.2);
@@ -16,7 +17,8 @@ $text-colors: (
   'white': $white,
   'grey': $grey,
   'bs-red': $primary,
-  'light': $light
+  'light': $light,
+  'night-blue': $night-blue,
 );
 
 // Fonts Weight

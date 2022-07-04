@@ -160,6 +160,9 @@ input {
 .text-light {
   color: #f8f8f8 !important;
 }
+.text-night-blue {
+  color: #323975 !important;
+}
 
 .bg-black {
   background-color: #1c1c1c !important;
@@ -175,6 +178,13 @@ input {
 }
 .bg-light {
   background-color: #f8f8f8 !important;
+}
+.bg-night-blue {
+  background-color: #323975 !important;
+}
+
+html {
+  background-color: #323975;
 }
 
 a {
