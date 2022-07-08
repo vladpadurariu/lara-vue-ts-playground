@@ -1,21 +1,8 @@
 /* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-unresolved */
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import { EffectFade, Navigation, Pagination } from 'swiper';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import type { Greeting } from './GreetingCarousel';
 
-// Import Swiper styles
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import 'swiper/scss';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import 'swiper/scss/navigation';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import 'swiper/scss/pagination';
-// eslint-disable-next-line import/extensions, import/no-unresolved
-import 'swiper/css/effect-fade';
+import type { Greeting } from './GreetingCarousel';
 
 defineProps({
   greetings: {
@@ -24,13 +11,12 @@ defineProps({
   },
 });
 
-const modules = [EffectFade, Pagination, Navigation];
+// const modules = [EffectFade, Pagination, Navigation];
 
 </script>
 
 <template>
   <swiper
-    :modules="modules"
     :slides-per-view="1"
     :effect="'fade'"
     :rewind="true"
@@ -47,17 +33,4 @@ const modules = [EffectFade, Pagination, Navigation];
   </swiper>
 </template>
 
-<style  lang="scss" scoped>
-.swiper-slide {
-  align-items: center;
-  background: #fff;
-  color: $primary;
-  display: flex;
-  font-family: DINPro;
-  font-size: $size-3;
-  font-weight: $weight-medium;
-  height: 10rem;
-  justify-content: center;
-}
-
-</style>
+<!-- <style  lang="scss" scoped></style> -->

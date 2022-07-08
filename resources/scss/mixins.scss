@@ -40,3 +40,23 @@
     }
   }
 }
+
+// Medium mixin :
+// https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b
+// Define vertical, horizontal, or both position
+@mixin centeriser($position) {
+  position: absolute;
+  @if $position == 'vertical' {
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+  @else if $position == 'both' {
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
