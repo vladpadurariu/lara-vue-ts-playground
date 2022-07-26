@@ -6,7 +6,7 @@
     "resources/js/**/*.d.ts",
     ".eslintrc.js",
     ".stylelintrc.js",
-    "webpack.mix.js"
+    "vite.config.js"
   ],
   "compilerOptions": {
     "baseUrl": ".",
@@ -14,7 +14,7 @@
     // https://github.com/vuejs/vue-loader/issues/1915
     "noImplicitAny": false,
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["@types/lodash", "@types/webpack-env", "@types/node"],
+    "types": ["@types/lodash", "@types/node"],
     "paths": {
       "@/*": ["./resources/js/*"],
       "@images/*": ["./resources/images/*"]

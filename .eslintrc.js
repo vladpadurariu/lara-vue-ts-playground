@@ -50,7 +50,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.spec.ts', 'webpack.mix.js'],
+        devDependencies: ['**/*.spec.ts', 'vite.config.js'],
       },
     ],
     // enforce Airbnb's section 19.7
