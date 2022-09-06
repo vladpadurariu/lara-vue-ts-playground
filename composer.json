@@ -46,7 +46,7 @@
             "php artisan ide-helper:generate && php artisan ide-helper:models --nowrite"
         ],
         "fresh": [
-            "php artisan migrate:fresh && php artisan db:seed --class TestDataSeeder"
+            "php artisan migrate:fresh && php artisan db:seed"
         ],
         "format:dry-run": [
             "vendor/bin/php-cs-fixer fix --dry-run --diff"

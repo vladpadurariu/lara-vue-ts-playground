@@ -5,7 +5,9 @@
   @typescript-eslint/no-var-requires,
   vue/component-api-style
 */
-import { createApp, h } from 'vue';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+import { createApp, h, type DefineComponent } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 // import FloatingVue, { VTooltip } from 'floating-vue';
@@ -30,7 +32,10 @@ import DefaultLayout from '@/layouts/Default.vue';
 createInertiaApp({
   title: (title) => `${title} - BS-X-Mas Cards`,
   resolve: async (name) => {
-    const page = (await import(`./pages/${name}`)).default;
+    const page = (await resolvePageComponent<DefineComponent>(
+      `./pages/${name}.vue`,
+      import.meta.glob('./pages/**/*.vue') as DefineComponent,
+    )).default;
 
     page.layout ??= DefaultLayout;
 
@@ -45,7 +50,6 @@ createInertiaApp({
       .use(plugin)
       // .use(Bugsnag.getPlugin('vue') as Plugin)
       .component('Link', Link)
-      // .directive('tooltip', VTooltip)
       .mount(el);
   },
 });
