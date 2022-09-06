@@ -86,113 +86,113 @@ return [
 
     'locales' => [
         [
-            "code" => "bs",
-            "language" => "Bosanski"
+            'code' => 'bs',
+            'language' => 'Bosanski',
         ],
         [
-            "code" => "bg",
-            "language" => "Български език"
+            'code' => 'bg',
+            'language' => 'Български език',
         ],
         [
-            "code" => "hr",
-            "language" => "Hrvatski"
+            'code' => 'hr',
+            'language' => 'Hrvatski',
         ],
         [
-            "code" => "cz",
-            "language" => "Čeština"
+            'code' => 'cz',
+            'language' => 'Čeština',
         ],
         [
-            "code" => "dk",
-            "language" => "Dansk"
+            'code' => 'dk',
+            'language' => 'Dansk',
         ],
         [
-            "code" => "de",
-            "language" => "Deutsch"
+            'code' => 'de',
+            'language' => 'Deutsch',
         ],
         [
-            "code" => "en",
-            "language" => "English"
+            'code' => 'en',
+            'language' => 'English',
         ],
         [
-            "code" => "ee",
-            "language" => "Eesti"
+            'code' => 'ee',
+            'language' => 'Eesti',
         ],
         [
-            "code" => "fi",
-            "language" => "Suomi"
+            'code' => 'fi',
+            'language' => 'Suomi',
         ],
         [
-            "code" => "fr",
-            "language" => "Français"
+            'code' => 'fr',
+            'language' => 'Français',
         ],
         [
-            "code" => "gr",
-            "language" => "Eλληνικά"
+            'code' => 'gr',
+            'language' => 'Eλληνικά',
         ],
         [
-            "code" => "hu",
-            "language" => "Magyar"
+            'code' => 'hu',
+            'language' => 'Magyar',
         ],
         [
-            "code" => "it",
-            "language" => "Italiano"
+            'code' => 'it',
+            'language' => 'Italiano',
         ],
         [
-            "code" => "jp",
-            "language" => "日本語"
+            'code' => 'jp',
+            'language' => '日本語',
         ],
         [
-            "code" => "lv",
-            "language" => "Latviešu"
+            'code' => 'lv',
+            'language' => 'Latviešu',
         ],
         [
-            "code" => "lt",
-            "language" => "Lietuvių"
+            'code' => 'lt',
+            'language' => 'Lietuvių',
         ],
         [
-            "code" => "nl",
-            "language" => "Nederlands"
+            'code' => 'nl',
+            'language' => 'Nederlands',
         ],
         [
-            "code" => "no",
-            "language" => "Norsk"
+            'code' => 'no',
+            'language' => 'Norsk',
         ],
         [
-            "code" => "pl",
-            "language" => "Polski"
+            'code' => 'pl',
+            'language' => 'Polski',
         ],
         [
-            "code" => "pt",
-            "language" => "Português"
+            'code' => 'pt',
+            'language' => 'Português',
         ],
         [
-            "code" => "ro",
-            "language" => "Română"
+            'code' => 'ro',
+            'language' => 'Română',
         ],
         [
-            "code" => "sr",
-            "language" => "Српски"
+            'code' => 'sr',
+            'language' => 'Српски',
         ],
         [
-            "code" => "sk",
-            "language" => "Slovenský Jazyk"
+            'code' => 'sk',
+            'language' => 'Slovenský Jazyk',
         ],
         [
-            "code" => "si",
-            "language" => "Slovenščina"
+            'code' => 'si',
+            'language' => 'Slovenščina',
         ],
         [
-            "code" => "es",
-            "language" => "Español"
+            'code' => 'es',
+            'language' => 'Español',
         ],
         [
-            "code" => "se",
-            "language" => "Svenska"
+            'code' => 'se',
+            'language' => 'Svenska',
         ],
         [
-            "code" => "ru",
-            "language" => "Pусский"
-        ]
+            'code' => 'ru',
+            'language' => 'Pусский',
+        ],
     ],
 
     /*

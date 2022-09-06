@@ -40,7 +40,12 @@ module.exports = {
       typescript: {},
     },
   },
-  ignorePatterns: ['/public', '/node_modules', '!.stylelintrc.js'],
+  ignorePatterns: [
+    '/public',
+    '/node_modules',
+    '!postcss.config.js',
+    '!.stylelintrc.js',
+  ],
   rules: {
     // discourage the use of console
     'no-console': 'warn',
