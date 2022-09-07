@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import type { ResourceTypeEnum, ModelTypeEnum } from "@/enums";
+import type { ResourceTypeEnum, ModelTypeEnum } from '@/enums';
 
 export interface LanguageResource {
   __typename: ResourceTypeEnum.Language;
