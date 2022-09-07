@@ -27,7 +27,7 @@ class CardResource extends JsonResource
             'second_image' => $this->second_image,
             'theme' => ThemeResource::collection($this->whenLoaded('theme')),
             'language' => LanguageResource::collection($this->whenLoaded('language')),
-            'greeting' => GreetingResource::collection($this->whenLoaded('greeting'))
+            'greeting' => GreetingResource::collection($this->whenLoaded('greeting')),
         ];
     }
 }

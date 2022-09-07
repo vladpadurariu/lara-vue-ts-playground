@@ -20,7 +20,7 @@ class SaveCard
 
         return Inertia::render('ViewCard', [
             'greeting' => $greeting->toResource(),
-            'theme' => $theme->toResource()
+            'theme' => $theme->toResource(),
         ]);
     }
 }

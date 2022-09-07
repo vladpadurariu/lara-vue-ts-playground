@@ -40,7 +40,12 @@ module.exports = {
       typescript: {},
     },
   },
-  ignorePatterns: ['/public', '/node_modules', '!.stylelintrc.js'],
+  ignorePatterns: [
+    '/public',
+    '/node_modules',
+    '!postcss.config.js',
+    '!.stylelintrc.js',
+  ],
   rules: {
     // discourage the use of console
     'no-console': 'warn',
@@ -50,7 +55,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.spec.ts', 'webpack.mix.js'],
+        devDependencies: ['**/*.spec.ts', 'vite.config.js'],
       },
     ],
     // enforce Airbnb's section 19.7

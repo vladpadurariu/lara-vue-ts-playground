@@ -2,9 +2,9 @@ name: laravel-vue
 recipe: laravel
 config:
   webroot: public
-  php: "8.1"
-  composer_version: "2.2.7"
-  database: mysql:8.0
+  php: '8.1'
+  composer_version: 2
+  database: 'mysql:8.0'
   cache: none
 services:
   appserver:
@@ -12,17 +12,20 @@ services:
       - composer install
   node:
     type: node:16
-    ssl: true
-    overrides:
-      ports:
-        - 3000:3000
-    build:
-      - npm install
+    build_internal:
+      - npm install --save-exact
+    command: npm run dev
+    globals: {}
+    port: '53241'
+    ssl: false
+proxy:
+  node:
+    - 'vite.laravel-vue.lndo.site:53241'
 tooling:
   node:
     service: node
   npm:
     service: node
-proxy:
-  node:
-    - bs.laravel-vue.lndo.site:3000
+  npx:
+    service: node
+

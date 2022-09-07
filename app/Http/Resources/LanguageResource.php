@@ -18,7 +18,7 @@ class LanguageResource extends JsonResource
             '__typename' => self::class,
             'uuid' => $this->uuid,
             'abbreviation' => $this->abbreviation,
-            'language' => $this->language
+            'language' => $this->language,
         ];
     }
 }
