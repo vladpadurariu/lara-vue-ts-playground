@@ -19,6 +19,7 @@ export interface ThemeResource {
   __typename: ResourceTypeEnum.Theme;
   uuid: string;
   name: string;
+  year: string;
   primary_image: string;
   top_image: string;
   bottom_image: string;

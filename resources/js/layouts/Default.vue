@@ -41,13 +41,13 @@ function handleFlakes() {
 
 const flakes = ref(1);
 
-function addFlake() {
-  flakes.value += 1;
-}
+// function addFlake() {
+//   flakes.value += 1;
+// }
 
-setInterval(addFlake, 800);
+// setInterval(addFlake, 800);
 
-watch(flakes, handleFlakes);
+// watch(flakes, handleFlakes);
 
 </script>
 

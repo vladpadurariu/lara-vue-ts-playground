@@ -20,7 +20,7 @@ const audios = computed(() => usePage<CreateCardPage>().props.value.audios);
     <!-- <AppSwiper :greetings="greetings" /> -->
     <AppGreetingsCarousel :greetings="greetings" />
     <AppThemesCarousel :themes="themes" />
-    <AppAudioCarousel :audios="audios" />
+    <!-- <AppAudioCarousel :audios="audios" /> -->
   </div>
 </template>
 

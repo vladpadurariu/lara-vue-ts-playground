@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique();
             $table->string('name')->unique();
-            $table->string('primary_image');
+            $table->year('year');
+            $table->string('primary_image')->nullable();
             $table->string('top_image')->nullable();
             $table->string('bottom_image')->nullable();
             $table->string('left_image')->nullable();
