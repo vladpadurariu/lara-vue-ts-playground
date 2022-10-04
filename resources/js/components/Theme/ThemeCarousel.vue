@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import { EffectFade, Navigation, Pagination } from 'swiper';
+
 // eslint-disable-next-line import/extensions, import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { EffectFade, Navigation, Pagination } from 'swiper';
 
 import type { Theme } from './ThemeCarousel';
 
@@ -28,6 +29,7 @@ defineProps({
 
 <template>
   <swiper
+    :modules="modules"
     :slides-per-view="1"
     :effect="'fade'"
     :rewind="true"

@@ -17,10 +17,9 @@ const audios = computed(() => usePage<CreateCardPage>().props.value.audios);
     <h3 class="text-center">
       This is the create card page
     </h3>
-    <!-- <AppSwiper :greetings="greetings" /> -->
     <AppGreetingsCarousel :greetings="greetings" />
     <AppThemesCarousel :themes="themes" />
-    <!-- <AppAudioCarousel :audios="audios" /> -->
+    <AppAudioCarousel :audios="audios" />
   </div>
 </template>
 
