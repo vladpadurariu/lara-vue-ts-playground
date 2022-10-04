@@ -46,3 +46,10 @@ export interface CardResource {
   language: LanguageResource;
   greeting: GreetingResource;
 }
+
+export interface AudioResource {
+  __typename: ResourceTypeEnum.Audio;
+  uuid: string;
+  name: string;
+  source: string;
+}
