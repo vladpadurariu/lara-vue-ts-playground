@@ -3,8 +3,10 @@
 namespace App\Actions;
 
 use App\Actions\Traits\AsAction;
+use App\Http\Resources\AudioResource;
 use App\Http\Resources\GreetingResource;
 use App\Http\Resources\ThemeResource;
+use App\Models\Audio;
 use App\Models\Greeting;
 use App\Models\Language;
 use App\Models\Theme;
@@ -21,12 +23,14 @@ class RenderCreateCard
         $lang = Language::where('abbreviation', $language)->first();
         $greetings = Greeting::where('language_id', $lang->id)->get();
         $themes = Theme::all();
+        $audios = Audio::all();
         session()->put('locale', $language);
 
         return Inertia::render('CreateCard',
             [
                 'greetings' => GreetingResource::collection($greetings),
                 'themes' => ThemeResource::collection($themes),
+                'audios' => AudioResource::collection($audios),
             ]
         );
     }

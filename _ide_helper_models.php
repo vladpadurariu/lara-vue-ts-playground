@@ -12,6 +12,20 @@
 
 namespace App\Models{
 /**
+ * App\Models\Audio
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Audio newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Audio newQuery()
+ * @method static \Illuminate\Database\Query\Builder|Audio onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Audio query()
+ * @method static \Illuminate\Database\Query\Builder|Audio withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|Audio withoutTrashed()
+ */
+	class Audio extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Card
  *
  * @property int $id
@@ -19,7 +33,7 @@ namespace App\Models{
  * @property int $theme_id
  * @property int $language_id
  * @property int $greeting_id
- * @property string $song
+ * @property int $audio_id
  * @property string $sender_f_name
  * @property string $sender_l_name
  * @property string $email_from
@@ -32,6 +46,7 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property-read \App\Models\Audio $audio
  * @property-read \App\Models\Greeting $greeting
  * @property-read \App\Models\Language $language
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Recipient[] $recipients
@@ -41,6 +56,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Card newQuery()
  * @method static \Illuminate\Database\Query\Builder|Card onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder|Card query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Card whereAudioId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereDeliveryDate($value)
@@ -55,7 +71,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereSecondImage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereSenderFName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereSenderLName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Card whereSong($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereThemeId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Card whereUuid($value)
@@ -164,7 +179,8 @@ namespace App\Models{
  * @property int $id
  * @property string $uuid
  * @property string $name
- * @property string $primary_image
+ * @property string $year
+ * @property string|null $primary_image
  * @property string|null $top_image
  * @property string|null $bottom_image
  * @property string|null $left_image
@@ -195,6 +211,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Theme whereTopRightImage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Theme whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Theme whereUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Theme whereYear($value)
  * @method static \Illuminate\Database\Query\Builder|Theme withTrashed()
  * @method static \Illuminate\Database\Query\Builder|Theme withoutTrashed()
  */

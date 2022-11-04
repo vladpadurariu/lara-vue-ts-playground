@@ -1,6 +1,7 @@
+<!-- eslint-disable max-len -->
 /* eslint-disable import/no-unresolved */
 <script setup lang="ts">
-import type { PropType } from 'vue';
+import { onMounted, PropType } from 'vue';
 
 // eslint-disable-next-line import/extensions, import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -40,19 +41,24 @@ defineProps({
     :centered-slides="true"
   >
     <swiper-slide
-      v-for="audio in audios"
-      :key="audio.name"
+      v-for="song in audios"
+      :key="song.name"
     >
       <audio controls>
         <track kind="captions">
-        <source src="{{ audio.source }}">
+        <source
+          :src="'../../../music/' + song.source"
+          type="audio/mpeg"
+        >
       </audio>
-      {{ audio.name }}
+
+      {{ song.name }}
     </swiper-slide>
   </swiper>
 </template>
 
 <style lang="scss" scoped>
+
   .swiper-slide {
     align-items: center;
     background: $night-blue;

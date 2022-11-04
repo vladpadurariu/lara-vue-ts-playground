@@ -16,7 +16,6 @@ class AudioResource extends JsonResource
     {
         return [
             '__typename' => self::class,
-            'uuid' => $this->uuid,
             'name' => $this->name,
             'source' => $this->source,
         ];

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('theme_id')->constrained('themes')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('language_id')->constrained('languages')->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignId('greeting_id')->constrained('greetings')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->enum('song', ['classic', 'hiphop', 'dubstep']);
+            $table->foreignId('audio_id')->constrained('audios')->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('sender_f_name');
             $table->string('sender_l_name');
             $table->string('email_from');

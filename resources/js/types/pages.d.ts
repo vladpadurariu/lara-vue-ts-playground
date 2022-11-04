@@ -1,6 +1,6 @@
 import type { Errors, ErrorBag } from "@inertiajs/inertia";
 import type { Locale, Translation } from "@/types/localization";
-import type { GreetingResource, LanguageResource, ThemeResource } from "@/types/resources";
+import type { GreetingResource, LanguageResource, ThemeResource, AudioResource } from "@/types/resources";
 
 export interface SharedLocalization {
   defaultLocale: string;
@@ -31,4 +31,5 @@ export interface ChooseLanguagePage extends SharedProps {
 export interface CreateCardPage extends SharedProps {
   greetings: Array<GreetingResource>;
   themes: Array<ThemeResource>;
+  audios: Array<AudioResource>;
 }

@@ -42,4 +42,9 @@ class Card extends Model
     {
         return CardResource::make($this);
     }
+
+    public function audio(): BelongsTo
+    {
+        return $this->belongsTo(Audio::class);
+    }
 }
